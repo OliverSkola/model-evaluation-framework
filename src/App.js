@@ -116,7 +116,7 @@ const ModelEvaluationFramework = () => {
       <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
         <h1 className="text-3xl font-bold text-gray-800 mb-2">Multi-Criteria Model Evaluation Framework</h1>
         <p className="text-gray-600 mb-6">
-          Combine Privacy, Efficiency, Openness, and QSAR scores with customizable weights to find the optimal model for your needs.
+          Combine Privacy, Efficiency, Openness, and Capability scores with customizable weights to find the optimal model for your needs.
         </p>
 
         {/* Weight Controls */}
@@ -198,7 +198,7 @@ const ModelEvaluationFramework = () => {
           
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              QSAR Weight: {(weights.qsar * 100).toFixed(1)}%
+              Capability Weight: {(weights.qsar * 100).toFixed(1)}%
             </label>
             <input
               type="range"
@@ -249,7 +249,7 @@ const ModelEvaluationFramework = () => {
               <option value="privacy">Privacy</option>
               <option value="efficiency">Efficiency</option>
               <option value="openness">Openness</option>
-              <option value="qsar">QSAR</option>
+              <option value="qsar">Capability</option>
             </select>
           </div>
 
@@ -265,7 +265,7 @@ const ModelEvaluationFramework = () => {
                   <option value="privacy">Privacy</option>
                   <option value="efficiency">Efficiency</option>
                   <option value="openness">Openness</option>
-                  <option value="qsar">QSAR</option>
+                  <option value="qsar">Capability</option>
                   <option value="compositeScore">Composite Score</option>
                 </select>
               </div>
@@ -280,7 +280,7 @@ const ModelEvaluationFramework = () => {
                   <option value="privacy">Privacy</option>
                   <option value="efficiency">Efficiency</option>
                   <option value="openness">Openness</option>
-                  <option value="qsar">QSAR</option>
+                  <option value="qsar">Capability</option>
                   <option value="compositeScore">Composite Score</option>
                 </select>
               </div>
@@ -302,7 +302,7 @@ const ModelEvaluationFramework = () => {
                   <th className="px-4 py-3 text-right text-sm font-medium text-gray-700">Privacy</th>
                   <th className="px-4 py-3 text-right text-sm font-medium text-gray-700">Efficiency</th>
                   <th className="px-4 py-3 text-right text-sm font-medium text-gray-700">Openness</th>
-                  <th className="px-4 py-3 text-right text-sm font-medium text-gray-700">QSAR</th>
+                  <th className="px-4 py-3 text-right text-sm font-medium text-gray-700">Capability</th>
                 </tr>
               </thead>
               <tbody>
@@ -350,7 +350,7 @@ const ModelEvaluationFramework = () => {
                 <Bar dataKey="privacy" fill="#10B981" name="Privacy" />
                 <Bar dataKey="efficiency" fill="#F59E0B" name="Efficiency" />
                 <Bar dataKey="openness" fill="#8B5CF6" name="Openness" />
-                <Bar dataKey="qsar" fill="#EF4444" name="QSAR" />
+                <Bar dataKey="qsar" fill="#EF4444" name="Capability" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -387,7 +387,7 @@ const ModelEvaluationFramework = () => {
                           <p>Privacy: {data.privacy.toFixed(1)}</p>
                           <p>Efficiency: {data.efficiency.toFixed(1)}</p>
                           <p>Openness: {data.openness.toFixed(1)}</p>
-                          <p>QSAR: {data.qsar.toFixed(1)}</p>
+                          <p>Capability: {data.qsar.toFixed(1)}</p>
                         </div>
                       );
                     }
@@ -411,7 +411,7 @@ const ModelEvaluationFramework = () => {
                 { metric: 'Privacy', ...topModels.reduce((acc, model, i) => ({ ...acc, [model.shortName]: model.privacy }), {}) },
                 { metric: 'Efficiency', ...topModels.reduce((acc, model, i) => ({ ...acc, [model.shortName]: model.efficiency }), {}) },
                 { metric: 'Openness', ...topModels.reduce((acc, model, i) => ({ ...acc, [model.shortName]: model.openness }), {}) },
-                { metric: 'QSAR', ...topModels.reduce((acc, model, i) => ({ ...acc, [model.shortName]: model.qsar }), {}) }
+                { metric: 'Capability', ...topModels.reduce((acc, model, i) => ({ ...acc, [model.shortName]: model.qsar }), {}) }
               ]}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="metric" />
@@ -448,7 +448,7 @@ const ModelEvaluationFramework = () => {
                 Privacy: {(weights.privacy * 100).toFixed(0)}%, 
                 Efficiency: {(weights.efficiency * 100).toFixed(0)}%, 
                 Openness: {(weights.openness * 100).toFixed(0)}%, 
-                QSAR: {(weights.qsar * 100).toFixed(0)}%
+                Capability: {(weights.qsar * 100).toFixed(0)}%
               </p>
             </div>
             <div>

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/model-evaluation-framework/static/css/main.a3a99f90.css",
+    "main.js": "/model-evaluation-framework/static/js/main.9aac1081.js",
+    "static/js/488.f68090c9.chunk.js": "/model-evaluation-framework/static/js/488.f68090c9.chunk.js",
+    "index.html": "/model-evaluation-framework/index.html",
+    "main.a3a99f90.css.map": "/model-evaluation-framework/static/css/main.a3a99f90.css.map",
+    "main.9aac1081.js.map": "/model-evaluation-framework/static/js/main.9aac1081.js.map",
+    "488.f68090c9.chunk.js.map": "/model-evaluation-framework/static/js/488.f68090c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3a99f90.css",
+    "static/js/main.9aac1081.js"
+  ]
+}
